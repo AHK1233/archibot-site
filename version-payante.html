@@ -1,5 +1,5 @@
 /*
-Fichier 2 : version-payante.html
+Fichier 3 : version-payante.html
 */
 <!DOCTYPE html>
 <html lang="fr">
@@ -65,15 +65,18 @@ Fichier 2 : version-payante.html
         res.innerHTML = '<p style="color:red;">Merci de déposer au moins un fichier.</p>';
         return;
       }
-      res.innerHTML = `
-        <h3>Analyse terminée :</h3>
-        <ul>
-          <li>CCTP généré avec précision</li>
-          <li>CCAP conforme aux marchés publics</li>
-          <li>Notice descriptive complète</li>
-          <li>Estimation complète : ${(200000 + Math.floor(Math.random()*100000)).toLocaleString()} € HT</li>
-        </ul>
-        <p>Un expert vous recontactera sous 24h pour valider les documents.</p>`;
+      res.innerHTML = '<p>Analyse en cours...</p>';
+      setTimeout(() => {
+        res.innerHTML = `
+          <h3>Analyse terminée :</h3>
+          <ul>
+            <li>CCTP généré avec précision</li>
+            <li>CCAP conforme aux marchés publics</li>
+            <li>Notice descriptive complète</li>
+            <li>Estimation complète : ${(200000 + Math.floor(Math.random()*100000)).toLocaleString()} € HT</li>
+          </ul>
+          <p>Un expert vous recontactera sous 24h pour valider les documents.</p>`;
+      }, 1500);
     }
   </script>
 </body>
