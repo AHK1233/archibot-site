@@ -1,20 +1,39 @@
+/*
+Fichier 2 : version-payante.html
+*/
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Archibot - Version Pro</title>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 2rem; background: #fff; }
-    .container { max-width: 600px; margin: auto; }
-    h1 { color: #2c5282; }
-    p { font-size: 1.1rem; }
-  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Archibot - Version Pro</h1>
-    <p>Accès réservé aux professionnels. Contactez-nous pour une démonstration complète des fonctionnalités avancées : chiffrages CCTP, CCAP, quantitatifs précis, etc.</p>
-    <button onclick="location.href='mailto:contact@littoralgroup.fr'">Nous contacter</button>
-  </div>
+  <h1>Bienvenue sur Archibot - Version Pro</h1>
+  <p>Déposez vos plans et documents pour générer automatiquement les CCTP, CCAP, estimations, etc.</p>
+
+  <input type="file" id="fichiers" multiple><br><br>
+  <button onclick="simulerTraitement()">Analyser les documents</button>
+
+  <div id="resultatPro" style="margin-top: 20px;"></div>
+
+  <script>
+    function simulerTraitement() {
+      const fichiers = document.getElementById('fichiers').files;
+      if (fichiers.length === 0) {
+        alert("Merci de déposer au moins un fichier.");
+        return;
+      }
+      document.getElementById('resultatPro').innerHTML =
+        `<h3>Analyse terminée :</h3>
+         <ul>
+           <li>CCTP généré</li>
+           <li>CCAP généré</li>
+           <li>Notice descriptive détaillée</li>
+           <li>Estimation complète : 242 000 € HT</li>
+         </ul>
+         <p>Votre projet est en cours de traitement final. Un expert vous contactera sous 24h.</p>`;
+    }
+  </script>
 </body>
 </html>
