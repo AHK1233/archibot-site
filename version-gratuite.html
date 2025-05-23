@@ -1,5 +1,5 @@
 /*
-Fichier 1 : version-gratuite.html
+Fichier 2 : version-gratuite.html
 */
 <!DOCTYPE html>
 <html lang="fr">
@@ -15,14 +15,8 @@ Fichier 1 : version-gratuite.html
       color: #333;
       padding: 20px;
     }
-    textarea {
-      width: 90%;
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
     button {
-      margin-top: 10px;
+      margin: 10px;
       padding: 10px 20px;
       background-color: #007BFF;
       color: white;
@@ -53,28 +47,43 @@ Fichier 1 : version-gratuite.html
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Blue_circle_icon.svg/1024px-Blue_circle_icon.svg.png" alt="Logo Archibot">
     <h1>Archibot - Assistant Gratuit</h1>
   </header>
-  <p>Décrivez votre projet et notre assistant vous donnera une estimation simple.</p>
+  <p>Bonjour, je suis votre assistant Archibot 👷‍♂️<br>Comment puis-je vous aider ?</p>
 
-  <textarea id="description" placeholder="Décrivez votre projet ici..." rows="6"></textarea><br>
-  <button onclick="analyser()">Analyser</button>
+  <div>
+    <button onclick="choisirOption('terrain')">Vous avez un projet d'achat de terrain</button>
+    <button onclick="choisirOption('permis')">Vous avez le terrain et voulez un permis de construire</button>
+    <button onclick="choisirOption('analyse')">Vous avez le permis et souhaitez une analyse détaillée</button>
+  </div>
 
   <div id="resultat"></div>
 
   <script>
-    function analyser() {
-      const texte = document.getElementById('description').value;
+    function choisirOption(option) {
       const res = document.getElementById('resultat');
-      if (!texte.trim()) {
-        res.innerHTML = '<p style="color:red;">Merci de décrire votre projet.</p>';
-        return;
-      }
-      let surface = 80 + Math.floor(Math.random() * 100);
-      let prix = surface * 1500;
-      res.innerHTML = `
-        <h3>Résultat estimé :</h3>
-        <p><strong>Surface estimée :</strong> environ ${surface} m²</p>
-        <p><strong>Coût estimatif :</strong> environ ${prix.toLocaleString()} € TTC</p>
-        <p><strong>Notice descriptive simplifiée générée automatiquement selon vos données.</strong></p>`;
+      res.innerHTML = '<p>Analyse en cours...</p>';
+      setTimeout(() => {
+        if (option === 'terrain') {
+          res.innerHTML = `
+            <h3>Estimation pour achat de terrain :</h3>
+            <p>✅ Estimation de surface constructible : ~${100 + Math.floor(Math.random() * 100)} m²</p>
+            <p>✅ Coût global estimé terrain + construction : ~${(150000 + Math.floor(Math.random() * 100000)).toLocaleString()} €</p>
+          `;
+        } else if (option === 'permis') {
+          res.innerHTML = `
+            <h3>Préparation de votre permis :</h3>
+            <p>✅ Notice descriptive simplifiée générée</p>
+            <p>✅ Plan type adapté à votre besoin</p>
+            <p>✅ Estimation de construction : ~${(200000 + Math.floor(Math.random() * 80000)).toLocaleString()} €</p>
+          `;
+        } else if (option === 'analyse') {
+          res.innerHTML = `
+            <h3>Analyse détaillée :</h3>
+            <p>✅ Simulation de CCTP et CCAP simplifiés</p>
+            <p>✅ Rapport sommaire généré automatiquement</p>
+            <p>✅ Estimation finale : ~${(250000 + Math.floor(Math.random() * 120000)).toLocaleString()} €</p>
+          `;
+        }
+      }, 1000);
     }
   </script>
 </body>
