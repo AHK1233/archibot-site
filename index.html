@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Archibot - Votre assistant IA pour la construction</title>
+  <title>Archibot – L'IA au service du bâtiment</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
     body {
@@ -14,68 +14,64 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       text-align: center;
       padding: 20px;
     }
+
     .container {
       background: rgba(255, 255, 255, 0.1);
-      padding: 50px 60px;
+      padding: 40px;
       border-radius: 20px;
-      max-width: 600px;
+      max-width: 800px;
+      width: 100%;
       box-shadow: 0 0 40px rgba(0, 75, 173, 0.7);
       backdrop-filter: blur(10px);
     }
+
     .logo {
-      width: 120px;
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    p.subtitle {
+      font-size: 1.2em;
       margin-bottom: 30px;
     }
-    h1 {
-      font-weight: 700;
-      font-size: 3rem;
-      margin-bottom: 10px;
-      letter-spacing: 2px;
+
+    .version-block {
+      background: white;
+      color: #333;
+      border-radius: 15px;
+      padding: 25px;
+      margin: 20px 0;
+      text-align: left;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
-    p {
-      font-size: 1.3rem;
-      margin-bottom: 40px;
-      line-height: 1.5;
+
+    .version-block h2 {
+      margin-top: 0;
+      color: #007bff;
     }
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
+
+    .version-block p {
+      font-size: 1em;
     }
-    button {
-      background-color: #007bff;
+
+    .version-block a button {
+      margin-top: 10px;
+      padding: 10px 25px;
+      font-size: 16px;
       border: none;
+      background-color: #007bff;
       color: white;
-      font-size: 18px;
-      padding: 15px 40px;
-      border-radius: 12px;
+      border-radius: 8px;
       cursor: pointer;
-      font-weight: 700;
-      transition: background-color 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0, 123, 255, 0.5);
-    }
-    button:hover {
-      background-color: #0056b3;
-      box-shadow: 0 8px 20px rgba(0, 86, 179, 0.7);
-    }
-    a {
-      text-decoration: none;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Logo Archibot" class="logo" />
-    <h1>Archibot</h1>
-    <p>Lancé par <strong>LITTORAL GROUP</strong>, votre assistant IA pour tous vos projets de construction.</p>
-    <div class="buttons">
-      <a href="connexion.html"><button>Se connecter</button></a>
-      <a href="accueil.html"><button>Continuer en tant qu'invité</button></a>
-    </div>
-  </div>
-</body>
-</html>
+      font-weight: bold;
+      transition: backg
