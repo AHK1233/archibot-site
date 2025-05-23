@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Archibot - Lancement par LITTORAL GROUP</title>
+  <title>Archibot - Votre assistant IA pour la construction</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #007BFF, #00c6ff);
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #004aad, #00bfff);
       color: white;
       display: flex;
       justify-content: center;
@@ -18,47 +19,48 @@
       padding: 20px;
     }
     .container {
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 40px 60px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 50px 60px;
       border-radius: 20px;
       max-width: 600px;
-      box-shadow: 0 0 40px rgba(0, 123, 255, 0.7);
+      box-shadow: 0 0 40px rgba(0, 75, 173, 0.7);
+      backdrop-filter: blur(10px);
     }
     .logo {
-      width: 100px;
+      width: 120px;
       margin-bottom: 30px;
     }
     h1 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
       font-weight: 700;
+      font-size: 3rem;
+      margin-bottom: 10px;
       letter-spacing: 2px;
     }
-    h2 {
-      font-weight: 400;
-      margin-bottom: 30px;
-      font-style: italic;
-    }
     p {
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       margin-bottom: 40px;
+      line-height: 1.5;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
     }
     button {
-      background-color: #004aad;
+      background-color: #007bff;
       border: none;
       color: white;
       font-size: 18px;
       padding: 15px 40px;
       border-radius: 12px;
       cursor: pointer;
-      margin: 0 15px;
+      font-weight: 700;
       transition: background-color 0.3s ease;
-      font-weight: 600;
-      box-shadow: 0 5px 15px rgba(0, 74, 173, 0.4);
+      box-shadow: 0 5px 15px rgba(0, 123, 255, 0.5);
     }
     button:hover {
-      background-color: #003080;
-      box-shadow: 0 8px 20px rgba(0, 48, 128, 0.6);
+      background-color: #0056b3;
+      box-shadow: 0 8px 20px rgba(0, 86, 179, 0.7);
     }
     a {
       text-decoration: none;
@@ -69,10 +71,11 @@
   <div class="container">
     <img src="https://cdn-icons-png.flaticon.com/512/3448/3448585.png" alt="Logo Archibot" class="logo" />
     <h1>Archibot</h1>
-    <h2>Lancé par <strong>LITTORAL GROUP</strong></h2>
-    <p>Votre assistant intelligent pour tous vos projets de construction.</p>
-    <a href="connexion.html"><button>Se connecter</button></a>
-    <a href="accueil.html"><button>Continuer en tant qu'invité</button></a>
+    <p>Lancé par <strong>LITTORAL GROUP</strong>, votre assistant IA pour tous vos projets de construction.</p>
+    <div class="buttons">
+      <a href="connexion.html"><button>Se connecter</button></a>
+      <a href="accueil.html"><button>Continuer en tant qu'invité</button></a>
+    </div>
   </div>
 </body>
 </html>
