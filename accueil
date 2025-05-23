@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choisissez votre version</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #007BFF, #00c6ff);
+      color: white;
+      text-align: center;
+      padding: 50px;
+    }
+    .container {
+      background-color: white;
+      color: #333;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      margin: auto;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    .logo {
+      width: 80px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 14px 30px;
+      margin: 20px 10px;
+      border: none;
+      border-radius: 8px;
+      background-color: #007BFF;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Blue_circle_icon.svg/1024px-Blue_circle_icon.svg.png" alt="Logo Archibot" class="logo">
+    <h1>Bienvenue invité 👋</h1>
+    <p>Choisissez une version à tester :</p>
+    <a href="version-gratuite.html"><button>Version gratuite</button></a>
+    <a href="version-payante.html"><button>Version payante</button></a>
+  </div>
+</body>
+</html>
