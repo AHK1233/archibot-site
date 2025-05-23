@@ -7,32 +7,73 @@ Fichier 2 : version-payante.html
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Archibot - Version Pro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+      color: #333;
+      padding: 20px;
+    }
+    input[type="file"] {
+      margin: 10px auto;
+      display: block;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    #resultatPro {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 20px;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    header img {
+      width: 100px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Bienvenue sur Archibot - Version Pro</h1>
-  <p>Déposez vos plans et documents pour générer automatiquement les CCTP, CCAP, estimations, etc.</p>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Blue_circle_icon.svg/1024px-Blue_circle_icon.svg.png" alt="Logo Archibot">
+    <h1>Archibot - Version Pro</h1>
+  </header>
+  <p>Déposez vos plans pour obtenir un chiffrage détaillé automatiquement.</p>
 
-  <input type="file" id="fichiers" multiple><br><br>
+  <input type="file" id="fichiers" multiple>
   <button onclick="simulerTraitement()">Analyser les documents</button>
 
-  <div id="resultatPro" style="margin-top: 20px;"></div>
+  <div id="resultatPro"></div>
 
   <script>
     function simulerTraitement() {
       const fichiers = document.getElementById('fichiers').files;
+      const res = document.getElementById('resultatPro');
       if (fichiers.length === 0) {
-        alert("Merci de déposer au moins un fichier.");
+        res.innerHTML = '<p style="color:red;">Merci de déposer au moins un fichier.</p>';
         return;
       }
-      document.getElementById('resultatPro').innerHTML =
-        `<h3>Analyse terminée :</h3>
-         <ul>
-           <li>CCTP généré</li>
-           <li>CCAP généré</li>
-           <li>Notice descriptive détaillée</li>
-           <li>Estimation complète : 242 000 € HT</li>
-         </ul>
-         <p>Votre projet est en cours de traitement final. Un expert vous contactera sous 24h.</p>`;
+      res.innerHTML = `
+        <h3>Analyse terminée :</h3>
+        <ul>
+          <li>CCTP généré avec précision</li>
+          <li>CCAP conforme aux marchés publics</li>
+          <li>Notice descriptive complète</li>
+          <li>Estimation complète : ${(200000 + Math.floor(Math.random()*100000)).toLocaleString()} € HT</li>
+        </ul>
+        <p>Un expert vous recontactera sous 24h pour valider les documents.</p>`;
     }
   </script>
 </body>
