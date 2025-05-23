@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Choisissez votre version</title>
+  <title>Bienvenue sur Archibot</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,45 +11,60 @@
       color: white;
       text-align: center;
       padding: 50px;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .container {
       background-color: white;
       color: #333;
-      padding: 30px;
+      padding: 30px 40px;
       border-radius: 15px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-      max-width: 600px;
-      margin: auto;
+      max-width: 450px;
+      width: 90%;
     }
     h1 {
       margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
+    p {
+      margin-bottom: 30px;
+      font-size: 1.2rem;
     }
     .logo {
       width: 80px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
     button {
-      padding: 14px 30px;
-      margin: 20px 10px;
+      padding: 12px 25px;
+      margin: 10px;
       border: none;
       border-radius: 8px;
       background-color: #007BFF;
       color: white;
-      font-size: 18px;
+      font-size: 16px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
     button:hover {
       background-color: #0056b3;
+    }
+    a {
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Blue_circle_icon.svg/1024px-Blue_circle_icon.svg.png" alt="Logo Archibot" class="logo" />
-    <h1>Bienvenue invité 👋</h1>
-    <p>Choisissez une version à tester :</p>
-    <a href="version-gratuite.html"><button>Version gratuite</button></a>
-    <a href="version-payante.html"><button>Version payante</button></a>
+    <img src="https://cdn-icons-png.flaticon.com/512/3448/3448585.png" alt="Logo Archibot" class="logo" />
+    <h1>Bienvenue sur Archibot</h1>
+    <p>Votre assistant intelligent pour la construction</p>
+    <a href="connexion.html"><button>Se connecter</button></a>
+    <a href="accueil.html"><button>Continuer en tant qu'invité</button></a>
   </div>
 </body>
 </html>
