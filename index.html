@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Archibot – L'IA au service du bâtiment</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
     body {
       margin: 0;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
       background: linear-gradient(135deg, #004aad, #00bfff);
       color: white;
       display: flex;
@@ -20,7 +19,7 @@
     }
 
     .container {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.15);
       padding: 40px;
       border-radius: 20px;
       max-width: 800px;
@@ -37,10 +36,10 @@
     h1 {
       font-size: 2.5em;
       margin-bottom: 10px;
-      font-weight: 700;
+      font-weight: bold;
     }
 
-    p.subtitle {
+    .subtitle {
       font-size: 1.2em;
       margin-bottom: 30px;
     }
@@ -52,7 +51,6 @@
       padding: 25px;
       margin: 20px 0;
       text-align: left;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
 
     .version-block h2 {
@@ -74,4 +72,39 @@
       border-radius: 8px;
       cursor: pointer;
       font-weight: bold;
-      transition: backg
+    }
+
+    .version-block a button:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Logo Archibot" class="logo" />
+    <h1>Archibot – L'IA au service du bâtiment</h1>
+    <p class="subtitle">Générez automatiquement vos CCTP, estimations, notices descriptives, et vos dossiers de permis de construire à partir d'une simple description.</p>
+
+    <div class="version-block">
+      <h2>Version Gratuite</h2>
+      <p>Destinée aux particuliers. Générez une notice simplifiée et un estimatif à partir de votre projet.</p>
+      <a href="version-gratuite.html"><button>Essayer gratuitement</button></a>
+    </div>
+
+    <div class="version-block">
+      <h2>Version Pro</h2>
+      <p>Pour architectes, économistes ou promoteurs. Export CCTP, CCAP, quantitatifs et modules BIM.</p>
+      <a href="version-payante.html"><button>Demander un accès Pro</button></a>
+    </div>
+
+    <footer>
+      Lancé par <strong>Littoral Group – Occitanie</strong>
+    </footer>
+  </div>
+</body>
+</html>
