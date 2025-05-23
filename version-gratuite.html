@@ -7,29 +7,74 @@ Fichier 1 : version-gratuite.html
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Archibot - Version Gratuite</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f8ff;
+      color: #333;
+      padding: 20px;
+    }
+    textarea {
+      width: 90%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #resultat {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 20px;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    header img {
+      width: 100px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Bienvenue sur Archibot - Version Gratuite</h1>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Blue_circle_icon.svg/1024px-Blue_circle_icon.svg.png" alt="Logo Archibot">
+    <h1>Archibot - Assistant Gratuit</h1>
+  </header>
   <p>Décrivez votre projet et notre assistant vous donnera une estimation simple.</p>
 
-  <textarea id="description" placeholder="Décrivez votre projet ici..." rows="6" cols="50"></textarea><br>
+  <textarea id="description" placeholder="Décrivez votre projet ici..." rows="6"></textarea><br>
   <button onclick="analyser()">Analyser</button>
 
-  <div id="resultat" style="margin-top: 20px;"></div>
+  <div id="resultat"></div>
 
   <script>
     function analyser() {
       const texte = document.getElementById('description').value;
+      const res = document.getElementById('resultat');
       if (!texte.trim()) {
-        alert("Merci de décrire votre projet.");
+        res.innerHTML = '<p style="color:red;">Merci de décrire votre projet.</p>';
         return;
       }
-      // Simulation de réponse
-      document.getElementById('resultat').innerHTML =
-        `<h3>Résultat estimé :</h3>
-         <p><strong>Surface estimée :</strong> environ 100 m²</p>
-         <p><strong>Coût estimatif :</strong> environ 150 000 € TTC</p>
-         <p><strong>Notice descriptive simplifiée générée automatiquement.</strong></p>`;
+      let surface = 80 + Math.floor(Math.random() * 100);
+      let prix = surface * 1500;
+      res.innerHTML = `
+        <h3>Résultat estimé :</h3>
+        <p><strong>Surface estimée :</strong> environ ${surface} m²</p>
+        <p><strong>Coût estimatif :</strong> environ ${prix.toLocaleString()} € TTC</p>
+        <p><strong>Notice descriptive simplifiée générée automatiquement selon vos données.</strong></p>`;
     }
   </script>
 </body>
