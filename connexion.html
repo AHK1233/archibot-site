@@ -1,0 +1,62 @@
+/*
+Fichier 1 : connexion.html
+*/
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion - Archibot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .guest {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Connexion à Archibot</h1>
+  <form onsubmit="event.preventDefault(); window.location.href='version-payante.html';">
+    <input type="email" placeholder="Email" required>
+    <input type="password" placeholder="Mot de passe" required>
+    <button type="submit">Se connecter</button>
+  </form>
+  <div class="guest">
+    <p>Ou</p>
+    <button onclick="window.location.href='version-gratuite.html'">Continuer en tant qu'invité</button>
+  </div>
+</body>
+</html>
