@@ -3,79 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Archibot - Votre assistant IA pour la construction</title>
+  <title>Archibot – L'IA au service du bâtiment</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
     body {
       margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(135deg, #004aad, #00bfff);
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4fa;
+      color: #333;
+      padding: 40px 20px;
       text-align: center;
-      padding: 20px;
     }
     .container {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 50px 60px;
-      border-radius: 20px;
-      max-width: 600px;
-      box-shadow: 0 0 40px rgba(0, 75, 173, 0.7);
-      backdrop-filter: blur(10px);
-    }
-    .logo {
-      width: 120px;
-      margin-bottom: 30px;
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
     }
     h1 {
-      font-weight: 700;
-      font-size: 3rem;
-      margin-bottom: 10px;
-      letter-spacing: 2px;
+      color: #2c3e50;
+      font-size: 2.2em;
     }
-    p {
-      font-size: 1.3rem;
-      margin-bottom: 40px;
-      line-height: 1.5;
+    .subtitle {
+      font-size: 1.1em;
+      color: #555;
+      margin-bottom: 30px;
     }
-    .buttons {
+    .boxes {
       display: flex;
-      justify-content: center;
-      gap: 25px;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+      margin-bottom: 30px;
     }
-    button {
-      background-color: #007bff;
-      border: none;
-      color: white;
-      font-size: 18px;
-      padding: 15px 40px;
+    .box {
+      background: #eef4fb;
       border-radius: 12px;
+      padding: 25px;
+      width: 100%;
+      max-width: 450px;
+      text-align: left;
+    }
+    .box h2 {
+      color: #2962ff;
+      margin-bottom: 10px;
+    }
+    .box p {
+      font-size: 0.95em;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .box button {
+      background: #2962ff;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
       cursor: pointer;
-      font-weight: 700;
-      transition: background-color 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0, 123, 255, 0.5);
     }
-    button:hover {
-      background-color: #0056b3;
-      box-shadow: 0 8px 20px rgba(0, 86, 179, 0.7);
+    .box button:hover {
+      background: #0039cb;
     }
-    a {
-      text-decoration: none;
+    footer {
+      margin-top: 20px;
+      color: #2962ff;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Logo Archibot" class="logo" />
-    <h1>Archibot</h1>
-    <p>Lancé par <strong>LITTORAL GROUP</strong>, votre assistant IA pour tous vos projets de construction.</p>
-    <div class="buttons">
-      <a href="connexion.html"><button>Se connecter</button></a>
-      <a href="accueil.html"><button>Continuer en tant qu'invité</button></a>
-    </div>
-  </div>
-</body>
-</html>
+    <h1>Archibot – L'IA au service du bâtiment</h1>
+    <p class="subtitle">Générez automatiquement vos CCTP, estimations, notices descriptives, et vos dossiers de permis de construire à partir d'une simple description.</p>
+
+    <div class="boxes">
+      <div class="box">
+        <h2>Version Gratuite</h2>
+        <p>Destinée aux particuliers ou primo-accédants. Grâce à une description sommaire ou un croquis, obtenez :</p>
+        <ul>
+          <li>✅ Une notice descriptive simplifiée</li>
+          <li>✅ Une estimation globale du coût de votre projet</li>
+        </ul>
+        <a href="version-gratuite.html"><button>Essayer gratuitement</button></a>
+      </div>
+
+      <div class="box">
+        <h2>Version Pro</h2>
+        <p>Pour professionnels du bâtiment : architectes, maîtres d'œuvre, économistes ou promoteurs. Pe
